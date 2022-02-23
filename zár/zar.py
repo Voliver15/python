@@ -38,6 +38,18 @@ for index,kod in enumerate(kodok,1):
 #szám lista összefűzése
 print("A nyitó kódszámok sorai:" + " ".join(str(szam)for szam in talalat))
 
+dupla=[]
+for index,kod in enumerate(kodok,1):
+    for karakter in kod:
+        if kod.count(karakter)>1:
+            dupla.append(index)
+
+if len(dupla)>0:
+    print(dupla[0])
+else:
+    print("Nem volt")
+            
+
 
 
 
