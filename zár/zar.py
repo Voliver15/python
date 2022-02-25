@@ -1,3 +1,5 @@
+import random
+
 f=open("ajto.txt")
 
 kodok=[]
@@ -43,12 +45,28 @@ for index,kod in enumerate(kodok,1):
     for karakter in kod:
         if kod.count(karakter)>1:
             dupla.append(index)
-
+print("4. feladat")
 if len(dupla)>0:
     print(dupla[0])
 else:
     print("Nem volt")
-            
+    
+#5. feladat
+ujkod=""
+valaszthato=["0","1","2","3","4","5","6","7","8","9"]
+while len(ujkod)<len(be):
+        szam=random.randint(0,len(valaszthato)-1)
+        ujkod+=valaszthato[szam]
+        valaszthato.pop(szam)
+
+print("5. feladat")
+print("Egy" + str(len(ujkod)) + "hosszú kódszám: " + ujkod)
+
+
+
+
+
+
 
 
 
