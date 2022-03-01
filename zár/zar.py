@@ -61,18 +61,31 @@ while len(ujkod)<len(be):
 
 print("5. feladat")
 print("Egy" + str(len(ujkod)) + "hosszú kódszám: " + ujkod)
-
+#6. feladat
 def nyit(jo,proba):
-    egyezik=len(jo)==len(proba)
+    egyezik=len(jo) == len(proba)
     if egyezik:
         elteres=ord(jo[0])-ord(proba[0])
         for i in range(1,len(jo)):
-            if (elteres-(ord(jo[i])-ord(proba[i]))) % 10 != 0:
+            if (elteres - (ord(jo[i]) - ord(proba[i]))) % 10 != 0:
                 egyezik=False
     return egyezik
 nyit()
             
+#7. feladat
+f=open("siker.txt","w")
 
+
+for i in kodok:
+    f.write(i + " ")
+    if len(i) != len(be):
+        f.write("hibás hossz\n")
+    elif nyit(i,be):
+        pass
+    else:
+        pass
+
+f.close()
 
 
 
