@@ -4,7 +4,6 @@ kosar=[]
 #print(szoveg)
 for sor in f:
     kosar.append(sor.strip())
-
 f.close()
 
 print("2. feladat")
@@ -18,12 +17,33 @@ sorszam=int(input("Vásárlás sorszáma: "))
 arunev=input("Árucikk neve: ")
 darab=int(input("Darabszám: "))
 
-
+#a termék első indexe
 aruindex=kosar.index(arunev)
 darablista=kosar[:aruindex]
-print(darablista)
+#print(darablista)
 vasarlasdb=darablista.count("F") +1
-print(vasarlasdb)
+#print(vasarlasdb)
 
 print("5. feladat")
 print("Az első vásárlás sorszáma: " + str(vasarlasdb))
+
+#a termék utolsó indexe
+utolsoindex=0
+for i in range(0,len(kosar)):
+    if kosar[i*-1-1]==arunev:
+        utolsoindex=len(kosar)-i
+        break
+darablista=kosar[:utolsoindex]
+vasarlasdb=darablista.count("F") +1
+print("Az utolsó vásárlás sorszáma: " + str(vasarlasdb))
+
+voltF=False
+szam=0
+
+for e in kosar:
+    if e == arunev:
+        
+
+
+
+    
