@@ -95,7 +95,7 @@ for e in stat:
 stat={}
 ossz=[]
 for e in kosar:
-    if e="F":
+    if e=="F":
         osszeg=0
         for i in stat.values():
             osszeg+=ertek(i)
@@ -106,7 +106,16 @@ for e in kosar:
             stat[e]+=1
         else:
             stat[e]=1
-    
+#print(ossz)
+f=open("osszeg.txt","w")
+for i in range(0,len(ossz)):
+    f.write(str(i+1)+ ": "+ str(ossz[i])+"\n")
+f.close()
 
 
+
+f=open("osszeg2.txt","w")
+for i,e in enumerate(ossz):
+    f.write(str(i+1)+": "+str(e)+"\n")
+f.close()
 
