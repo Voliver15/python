@@ -75,7 +75,7 @@ for i in range(0,len(kosar)):
         keresettindex=i
     if darabF==sorszam:
         break
-print(kosar[elozoindex+1:keresettindex])
+#print(kosar[elozoindex+1:keresettindex])
 if sorszam>1:
     darabkosar=kosar[elozoindex+1:keresettindex]
 else:
@@ -87,8 +87,9 @@ for e in darabkosar:
         stat[e]+=1
     else:
         stat[e]=1
-print(stat)
-
+#print(stat)
+for e in stat:
+    print(str(stat[e])+" "+e)
 
 
 
