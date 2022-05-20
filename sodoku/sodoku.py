@@ -1,5 +1,12 @@
 import math
 
+def oszlopban_van_e(oszlop,ertek):
+    for o in tabla:
+        if o[oszlop]==ertek:
+            return True
+    return False
+
+    
 print("1. feladat")
 #filenev=input("Adja meg a bemeneti fájl nevét!: ")
 #sor=int(input("Adja meg egy sor számát!: "))
@@ -52,7 +59,39 @@ print("4.feladat")
 print("Az üres helyek aránya: {:.0%}".format(db/81))
 
 for lepes in lepesek:
+    t_s=int(lepes[1])-1 #tempsor
+    t_o=int(lepes[2])-1 #temposzlop
+
+
     
+    print(lepes)
+    print(tabla[int(lepes[1])-1][int(lepes[2])-1])
+    
+    print(lepes[0] in tabla[int(lepes[1])-1])
+    if tabla[t_s][t_o]!="0":
+        print("A helyet már kitöltötték")
+    elif lepes[0] in tabla[t_s]:
+        print("Az adott sorban már szerepel a szám")
+    elif oszlopban_van_e(t_o,lepes[0]):
+        print("Az adott oszlopban már szerepel a szám")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
