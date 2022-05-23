@@ -6,6 +6,13 @@ def oszlopban_van_e(oszlop,ertek):
             return True
     return False
 
+def resztabla(sor,oszlop):
+    s=math.ceil((sor+1)/3)-1
+    o=math.ceil((oszlop+1)/3)
+
+    return s*3+o
+
+
     
 print("1. feladat")
 #filenev=input("Adja meg a bemeneti fájl nevét!: ")
@@ -55,27 +62,33 @@ print("A hely a(z) {} résztáblázathoz tartozik.".format(s*3+o))
 db=0
 for s in tabla:
     db+=s.count("0")
+    
 print("4.feladat")
 print("Az üres helyek aránya: {:.0%}".format(db/81))
 
+print("5. feladat")
 for lepes in lepesek:
+    #["9", "2", "4"]
     t_s=int(lepes[1])-1 #tempsor
     t_o=int(lepes[2])-1 #temposzlop
 
-
-    
-    print(lepes)
-    print(tabla[int(lepes[1])-1][int(lepes[2])-1])
-    
-    print(lepes[0] in tabla[int(lepes[1])-1])
+    volt=False
+    for i in range (0,9):
+        for k in range(0,9):
+            if resztabla(t_s,t_o)==resztabla(i,k):
+                if tabla[i][k]==lepes[0]:
+                    volt=True
+                   
     if tabla[t_s][t_o]!="0":
         print("A helyet már kitöltötték")
     elif lepes[0] in tabla[t_s]:
         print("Az adott sorban már szerepel a szám")
     elif oszlopban_van_e(t_o,lepes[0]):
         print("Az adott oszlopban már szerepel a szám")
-
-
+    elif volt:
+        print("Az adott résztáblázatban már szerepel a szám")
+    else:
+        print("A lépés megtehető")
 
 
 
