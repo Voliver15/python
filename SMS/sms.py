@@ -24,3 +24,47 @@ for i in range(0,len(smsek)):
 
 print("óra:{} perc:{} telefonszám:{} üzenet:{}".format(smsek[maxIndex].ora,smsek[maxIndex].perc,smsek[maxIndex].telefonszam,smsek[maxIndex].uzenet))
 print("óra:{} perc:{} telefonszám:{} üzenet:{}".format(smsek[minIndex].ora,smsek[minIndex].perc,smsek[minIndex].telefonszam,smsek[minIndex].uzenet))
+
+
+stat=[0,0,0,0,0]
+for a in smsek:
+    if len(a.uzenet)<=20:
+        stat[0]+=1
+    elif len(a.uzenet)<=40:
+        stat[1]+=1
+    elif len(a.uzenet)<=60:
+        stat[2]+=1
+    elif len(a.uzenet)<=80:
+        stat[3]+=1
+    else:
+        stat[4]+=1
+print(stat)
+print("4. feladat")
+print("1-20:{}, 21-40:{}, 41-60:{}, 61-80:{}, 81-100:{},".format(stat[0],stat[1],stat[2],stat[3],stat[4],))
+stat=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+for a in smsek:
+    stat[a.ora]+=1
+
+
+ossz=0
+for a in stat:
+    if a > 10:
+        ossz+=a-10
+        
+
+print("5.feladat Ernőnek {} sms-t kell fizetnie".format(ossz))
+
+elozo=-1
+idotav=[]
+for a in smsek:
+    if a.telefonszam=="123456789":
+        if elozo!=-1:
+            idotav.append(a.idoperc()-elozo)
+            elozo=a.idoperc()
+    
+print(idotav)
+
+
+
+            
+            
