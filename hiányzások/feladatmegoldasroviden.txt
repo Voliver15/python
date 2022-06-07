@@ -1,0 +1,7 @@
+1,beolvasás(f=open()) eltárolás(listában) szerekezet:hónap,nap,név,hiányzás
+2,bekérdezzük a lista méretét(len)
+3,megszámolni hány x és i van (count)
+4,algoritmus lekodolása
+5,2db input meg az előző feladat függvényt használni
+6,megfelelő napok vizsgálata adott óraszámban hogy x vagy i szerepel-e ezek megszámolása
+7,max függvény használata listával

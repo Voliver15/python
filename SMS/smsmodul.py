@@ -6,7 +6,11 @@ class adatok:
         self.telefonszam = vag[2]
 
         self.uzenet = sor2
-        
+
+
+    def idoperc(self):
+        return self.ora*60+self.perc
+                
 
 
 

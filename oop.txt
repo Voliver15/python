@@ -1,0 +1,27 @@
+OOP(objektum orientált programozás)
+metoldus 
+class a tervrajza(leírása)
+classból egy objektum az egy konkrét példány(példányositás)
+konstruktor=speciális függvény ami a példányositáskor lefut
+sok esetben van egy párja a destruktor(törléskor lefutó függvény)
+öröklődés=a gyermek vagy leszármazott örökli a szülő vagy ős tulajdonságait és metoldusait és kaphat sajátokat is illetve felülirhatja az ősét
+
+"class"kulcsszóval történik 
+__init__()-konstruktor 
+__del__()-destruktor
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
